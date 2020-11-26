@@ -14,12 +14,12 @@ The token should be passed as an env var at container start for example:
 To run the container
 default
 ```
-docker run -it -p 514:514/udp -p 601:601 --env SUMOTOKENOTOKEN --env SUMODEPLOYMENT=$SUMODEPLOYMENT --name syslog-ng-sumocloud syslog-ng-sumocloud:latest
+docker run -it -p 514:514/udp -p 601:601 --env SUMOTOKEN=$SUMOTOKEN --env SUMODEPLOYMENT=$SUMODEPLOYMENT --name syslog-ng-sumocloud syslog-ng-sumocloud:latest
 ```
 
 use custom syslog-ng.conf
 ```
-docker run -it -p 514:514/udp -p 601:601 -v "$PWD/syslog-ng.conf":/etc/syslog-ng/syslog-ng.conf --env SUMOTOKENOTOKEN --env SUMODEPLOYMENT=$SUMODEPLOYMENT --name syslog-ng-sumocloud syslog-ng-sumocloud:latest
+docker run -it -p 514:514/udp -p 601:601 -v "$PWD/syslog-ng.conf":/etc/syslog-ng/syslog-ng.conf --env SUMOTOKEN=$SUMOTOKEN --env SUMODEPLOYMENT=$SUMODEPLOYMENT --name syslog-ng-sumocloud syslog-ng-sumocloud:latest
 ```
 
 to start in bash instead you can do this:
